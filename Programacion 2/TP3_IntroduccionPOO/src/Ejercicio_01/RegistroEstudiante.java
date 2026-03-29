@@ -79,6 +79,14 @@ public class RegistroEstudiante {
         }
     }
 
+    public void bajarCalificacion(double puntos){
+        double calificacion = this.calificacion - puntos;
+        if (calificacion<0){
+            System.out.println("La calificacion no puede ser menor a 0");
+        }else {
+            this.calificacion = calificacion;
+        }
+    }
 
 
 
