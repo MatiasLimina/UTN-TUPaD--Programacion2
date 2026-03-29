@@ -3,7 +3,7 @@ package Ejercicio_01;
 public class RegistroEstudiante {
     private String nombre;
     private String apellido;
-    private String cursos;
+    private String curso;
     private double calificacion;
 
     public String getNombre() {
@@ -30,15 +30,15 @@ public class RegistroEstudiante {
         }
     }
 
-    public String getCursos() {
-        return cursos;
+    public String getCurso() {
+        return curso;
     }
 
-    public void setCursos(String cursos) {
-        if (cursos == null || cursos.isEmpty()){
+    public void setCurso(String curso) {
+        if (curso == null || curso.isEmpty()){
             System.out.println("Los cursos no pueden estar vacios");
         }else{
-            this.cursos = cursos;
+            this.curso = curso;
         }
     }
 
@@ -53,4 +53,13 @@ public class RegistroEstudiante {
             this.calificacion = calificacion;
         }
     }
+    public void mostrarInfo(){
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Curso: " + curso);
+        System.out.println("Calificacion: " + calificacion);
+    }
+
+
+
 }
