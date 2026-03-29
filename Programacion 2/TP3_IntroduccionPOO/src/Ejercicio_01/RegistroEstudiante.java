@@ -12,7 +12,7 @@ public class RegistroEstudiante {
     }
 
     public void setNombre(String nombre) {
-        if (nombre == null || nombre.isEmpty())
+        if (nombre == null || nombre.trim().isEmpty())
             System.out.println("El nombre no puede estar vacio");
         else {
             this.nombre = nombre;
@@ -24,7 +24,7 @@ public class RegistroEstudiante {
     }
 
     public void setApellido(String apellido) {
-        if (apellido == null || apellido.isEmpty()){
+        if (apellido == null || apellido.trim().isEmpty()){
             System.out.println("El apellido no puede estar vacio");
         }else{
             this.apellido = apellido;
@@ -69,7 +69,7 @@ public class RegistroEstudiante {
         }
     }
 
-    public void subirCalificacion(double puntos){
+    public void subirCalificacion(){
         double calificacion = this.calificacion + puntos;
         if (calificacion>10){
             System.out.println("La calificacion no puede ser mayor a 10");
@@ -79,15 +79,15 @@ public class RegistroEstudiante {
         }
     }
 
-    public void bajarCalificacion(double puntos){
+    public void bajarCalificacion(){
         double calificacion = this.calificacion - puntos;
         if (calificacion<0){
             System.out.println("La calificacion no puede ser menor a 0");
         }else {
+            System.out.println("Calificacion actualizada con exito");
             this.calificacion = calificacion;
         }
     }
 
-
-
 }
+
