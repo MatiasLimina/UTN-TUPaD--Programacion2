@@ -68,4 +68,18 @@ public class RegistroEstudiante {
             this.puntos = puntos;
         }
     }
+
+    public void subirCalificacion(double puntos){
+        double calificacion = this.calificacion + puntos;
+        if (calificacion>10){
+            System.out.println("La calificacion no puede ser mayor a 10");
+        }else {
+            System.out.println("Calificacion actualizada con exito");
+            this.calificacion = calificacion;
+        }
+    }
+
+
+
+
 }
