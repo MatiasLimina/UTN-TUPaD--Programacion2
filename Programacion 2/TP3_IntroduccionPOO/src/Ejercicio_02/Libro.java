@@ -42,4 +42,23 @@ public class Libro {
             this.añoPublicacion = añoPublicacion;
         }
     }
+
+    /**
+     * Muestra la informacion del libro
+     */
+    public void mostrarInfo(){
+        System.out.println("Titulo: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Año de publicacion: " + añoPublicacion);
+    }
+
+    public void modificarAñoPublicacion(int añoPublicacion){
+        if(añoPublicacion <= 0){
+            System.out.println("El año de publicacion debe ser positivo");
+        }else if(añoPublicacion > 2026){
+            System.out.println("El año de publicacion no puede ser mayor al actual");
+        }else{
+            this.añoPublicacion = añoPublicacion;
+        }
+    }
 }
