@@ -5,6 +5,7 @@ public class RegistroEstudiante {
     private String apellido;
     private String curso;
     private double calificacion;
+    private double puntos;
 
     public String getNombre() {
         return nombre;
@@ -60,6 +61,11 @@ public class RegistroEstudiante {
         System.out.println("Calificacion: " + calificacion);
     }
 
-
-
+    public void setPuntos(double puntos) {
+        if (puntos<0){
+            System.out.println("Los puntos no pueden ser negativos");
+        }else {
+            this.puntos = puntos;
+        }
+    }
 }
