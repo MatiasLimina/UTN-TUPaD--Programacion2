@@ -40,4 +40,13 @@ public class Mascota {
             this.edad = edad;
         }
     }
+
+    public void mostrarInfo(){
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Especie: " + especie);
+        System.out.println("Edad: " + edad);
+    }
+    public void cumplirAños(){
+        edad++;
+    }
 }
