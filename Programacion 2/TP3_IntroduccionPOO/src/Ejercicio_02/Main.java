@@ -11,5 +11,16 @@ public class Main {
         libroErrores.mostrarInfo();
         libroErrores.modificarAñoPublicacion(2027);
         libroErrores.mostrarInfo();
+        System.out.println("----------------------------------------");
+        System.out.println("Prueba de libro valido:");
+
+        Libro libroValido = new Libro();
+        libroValido.setTitulo("Titulo de prueba");
+        libroValido.setAutor("Autor de prueba");
+        libroValido.setAñoPublicacion(2025);
+        libroValido.mostrarInfo();
+        libroValido.modificarAñoPublicacion(2000);
+        libroValido.mostrarInfo();
+        System.out.println("----------------------------------------");
     }
 }
