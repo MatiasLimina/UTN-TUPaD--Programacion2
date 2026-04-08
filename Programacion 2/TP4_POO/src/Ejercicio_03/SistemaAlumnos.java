@@ -2,7 +2,7 @@ package Ejercicio_03;
 
 public class SistemaAlumnos {
     private String nombre;
-    private double nota;
+    private double promedio;
     static double notaAprobacion = 6;
 
     /*
@@ -11,7 +11,7 @@ public class SistemaAlumnos {
      */
     public SistemaAlumnos(String nombre, double nota) {
         this.nombre = nombre;
-        this.nota = nota;
+        this.promedio = nota;
     }
     public SistemaAlumnos(String nombre){
         this(nombre, 0);
@@ -30,17 +30,42 @@ public class SistemaAlumnos {
 
     }
 
-    public double getNota() {
-        return nota;
+    public double getPromedio() {
+        return promedio;
     }
 
-    public void setNota(double nota) {
-        if (nota < 0 || nota > 10) {
+    public void setPromedio(double promedio) {
+        if (promedio < 0 || promedio > 10) {
             System.out.println("ERROR: La nota debe estar entre 0 y 10");
         }else{
-            this.nota = nota;
+            this.promedio = promedio;
         }
     }
+    public void actualizarPromedio(double promedio){
+        if (promedio < 0 || promedio > 10) {
+            System.out.println("ERROR: La nota debe estar entre 0 y 10");
 
+        }else {
+            this.promedio = promedio;
+        }
+    }
+    public void actualizarPromedio(double[] notas) {
+        if (notas == null || notas.length == 0) {
+            System.out.println("ERROR: No se proporcionaron notas.");
+            return;
+        }
+
+        double suma = 0;
+        for (double nota : notas) {
+            if (nota < 0 || nota > 10) {
+                System.out.println("ERROR: Nota " + nota + " fuera de rango (0-10).");
+                return;
+            }
+            suma += nota;
+        }
+        double resultado = suma / notas.length;
+        actualizarPromedio(resultado);
+    }
 
 }
+
