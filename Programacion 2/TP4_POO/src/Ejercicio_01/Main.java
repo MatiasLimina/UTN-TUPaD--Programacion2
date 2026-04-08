@@ -2,14 +2,16 @@ package Ejercicio_01;
 
 public class Main {
     public static void main(String[] args) {
+        int cantEmpleados;
         System.out.println("Ejercicio 01 - Empleados");
         Empleado empleado1 = new Empleado("Juan", "Gerente", 1000);
-        Empleado.mostrarTotalEmpleados(Empleado.getTotalEmpleados());
+        System.out.println(empleado1.toString());
+        cantEmpleados = Empleado.mostrarTotalEmpleados();
+        System.out.println("Total de empleados: " + cantEmpleados);
         Empleado empleado2 = new Empleado("Maria", "Analista", 500);
         Empleado empleado3 = new Empleado("Pedro", "Programador");
-
-        Empleado.mostrarTotalEmpleados(Empleado.getTotalEmpleados());
-        System.out.println(empleado1.toString());
+        cantEmpleados = Empleado.mostrarTotalEmpleados();
+        System.out.println("Total de empleados: " + cantEmpleados);
         System.out.println(empleado2.toString());
         System.out.println(empleado3.toString());
         empleado1.actualizarSalario(100);

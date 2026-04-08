@@ -64,11 +64,9 @@ public class Empleado {
     public int getId() {
         return id;
     }
-    public static int getTotalEmpleados() {
+
+    public static int mostrarTotalEmpleados() {
         return totalEmpleados;
-    }
-    public static void mostrarTotalEmpleados(int totalEmpleados) {
-        System.out.println("Total de empleados: " + totalEmpleados);
     }
     public void actualizarSalario(int aumento){
         if (aumento < 0) {
