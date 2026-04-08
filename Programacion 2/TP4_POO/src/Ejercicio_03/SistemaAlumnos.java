@@ -66,6 +66,24 @@ public class SistemaAlumnos {
         double resultado = suma / notas.length;
         actualizarPromedio(resultado);
     }
+    public boolean aprobo(){
+        return promedio >= notaAprobacion;
+    }
 
+    public static void cambiarNotaAprobacion(double nuevaNota) {
+        if (nuevaNota<0 || nuevaNota>10){
+            System.out.println("ERROR: La nota aprobacion debe estar entre 0 y 10");
+        }else{
+            notaAprobacion = nuevaNota;
+        }
+    }
+    @Override
+    public String toString() {
+        return "SistemaAlumnos{" +
+                "nombre='" + nombre + '\'' +
+                ", promedio=" + promedio +
+                ", Aprobo?=" + aprobo() +
+                '}';
+    }
 }
 
