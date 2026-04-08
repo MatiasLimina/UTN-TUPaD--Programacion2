@@ -46,7 +46,17 @@ public class SistemaRegistroLibros {
     }
 
     public void actualizarTitulo(String titulo) {
-
-
+        if (titulo == null || titulo.isEmpty() || titulo.equals("null")) {
+            System.out.println("ERROR: El titulo no puede ser nulo o estar vacio");
+        }else {
+            this.titulo = titulo;
+        }
+    }
+    public void actualizarTitulo(String titulo, String prefijo){
+        if (prefijo == null || prefijo.isEmpty() || prefijo.equals("null")) {
+            System.out.println("ERROR: El prefijo no puede ser nulo o estar vacio");
+        }else {
+            actualizarTitulo(prefijo + " " + titulo);
+        }
     }
 }
