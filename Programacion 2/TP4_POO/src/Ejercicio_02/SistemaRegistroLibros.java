@@ -59,4 +59,20 @@ public class SistemaRegistroLibros {
             actualizarTitulo(prefijo + " " + titulo);
         }
     }
+    public static void cambiarEditorial(String nuevaEditorial) {
+        if (nuevaEditorial != null && !nuevaEditorial.isEmpty()) {
+            editorial = nuevaEditorial;
+        } else {
+            System.out.println("ERROR: La editorial no puede estar vacía.");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "SistemaRegistroLibros{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", editorial='" + editorial + '\'' +
+                '}';
+    }
 }
