@@ -63,5 +63,15 @@ public class BancaSimple {
             saldo -= cantidad;
         }
     }
-
+    public static void mostrarTotalCuentas(){
+        System.out.println("Total de cuentas: " + totalCuentas);
+    }
+    @Override
+    public String toString() {
+        return "BancaSimple{" +
+                "numero=" + numero +
+                ", nombre='" + nombre + '\'' +
+                ", saldo=" + String.format("%.2f", saldo) +
+                '}';
+    }
 }
