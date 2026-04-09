@@ -42,4 +42,23 @@ public class InventarioProductos {
             this.precioBase = precioBase;
         }
     }
+
+    public void aplicarDescuento(double descuento, double precioMinimo){
+        double aux;
+        if (descuento < 0 || descuento > 100) {
+            System.out.println("ERROR: El descuento debe estar entre 0 y 100");
+        }else{
+            descuento = descuento/100;
+            aux = precioBase - (precioBase * descuento);
+            if (aux < precioMinimo) {
+                System.out.println("El precio final no puede ser menor al precio minimo de: " + precioMinimo);
+            }else {
+                precioBase = aux;
+            }
+        }
+    }
+    public void aplicarDescuento(double descuento){
+        aplicarDescuento(descuento, 0);
+    }
+
 }
