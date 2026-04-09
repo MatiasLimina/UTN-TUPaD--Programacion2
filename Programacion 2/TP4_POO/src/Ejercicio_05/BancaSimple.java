@@ -53,5 +53,15 @@ public class BancaSimple {
             return saldo / cotizacionDolar;
         }
     }
+    public void depositar(double cantidad){
+        saldo += cantidad;
+    }
+    public void retirar(double cantidad){
+        if (cantidad > saldo) {
+            System.out.println("ERROR: No hay suficiente saldo en la cuenta.");
+        }else {
+            saldo -= cantidad;
+        }
+    }
 
 }
