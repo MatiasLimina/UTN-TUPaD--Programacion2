@@ -34,10 +34,6 @@ public class BancaSimple {
         }
     }
 
-    public double getSaldo() {
-        return saldo;
-    }
-
     public void setSaldo(double saldo) {
         if(saldo<0){
             System.out.println("ERROR: El saldo no puede ser negativo");
@@ -45,4 +41,17 @@ public class BancaSimple {
             this.saldo = saldo;
         }
     }
+    public double consultarSaldo(){
+        return saldo;
+    }
+
+    public double consultarSaldo(double cotizacionDolar) {
+        if (cotizacionDolar <= 0) {
+            System.out.println("ERROR: La cotización debe ser mayor a cero.");
+            return saldo;
+        }else {
+            return saldo / cotizacionDolar;
+        }
+    }
+
 }
