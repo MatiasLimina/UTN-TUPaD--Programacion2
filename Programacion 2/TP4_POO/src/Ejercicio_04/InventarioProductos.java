@@ -61,4 +61,24 @@ public class InventarioProductos {
         aplicarDescuento(descuento, 0);
     }
 
+    public double calcularPrecioFinal(){
+        return precioBase + (precioBase * IVA);
+    }
+    public static void cambiarIVA(double nuevoIVA){
+        if (nuevoIVA < 0) {
+            System.out.println("ERROR: El IVA debe ser positivo");
+        }else{
+            IVA = nuevoIVA/100;
+        }
+    }
+    @Override
+    public String toString() {
+        return "InventarioProductos{" +
+                "nombre='" + nombre + '\'' +
+                ", precioBase=" + precioBase +
+                ", PrecoprecioFinal=" + calcularPrecioFinal()+
+                '}';
+    }
+
+
 }
