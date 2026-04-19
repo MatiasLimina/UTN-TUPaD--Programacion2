@@ -7,7 +7,7 @@ public class Suscripcion {
     private String cliente;
     private int mesesPagados;
     private double tarifaMensual;
-    static int totalSuscripciones = 0;
+    private static int totalSuscripciones = 0;
 
     public Suscripcion(String cliente, int mesesPagados, double tarifaMensual) {
         setCliente(cliente);
