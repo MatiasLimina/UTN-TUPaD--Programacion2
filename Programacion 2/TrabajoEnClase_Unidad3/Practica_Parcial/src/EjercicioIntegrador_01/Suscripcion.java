@@ -73,4 +73,19 @@ public class Suscripcion {
         }
     }
 
+    public static int getSuscripcionesActivas(){
+        return totalSuscripciones;
+    }
+
+    @Override
+    public String toString() {
+        return "Suscripcion{" +
+                "numeroSocio=" + numeroSocio +
+                ", cliente='" + cliente + '\'' +
+                ", mesesPagados=" + mesesPagados +
+                ", tarifaMensual=" + tarifaMensual +
+                '}';
+    }
+
+
 }
