@@ -23,7 +23,7 @@ public class Suscripcion {
     }
 
     public void setCliente(String cliente) {
-        if (cliente = null || cliente.isBlank()){
+        if (cliente == null || cliente.isBlank()){
             System.out.println("ERROR: el nombre de cliente no puede estar vacio");
             this.cliente = "Sin nombre";
         }else{
@@ -56,4 +56,21 @@ public class Suscripcion {
             this.tarifaMensual = tarifaMensual;
         }
     }
+
+    public void renovarSuscripcion(int mesesExtras){
+        if (mesesExtras < 0){
+            System.out.println("ERROR: los meses a renovar no pueden ser menores a 0");
+        }else{
+            this.mesesPagados += mesesExtras;
+        }
+    }
+    public void renovarSuscripcion(double pagoRealizado){
+        if (pagoRealizado < 0 || pagoRealizado<tarifaMensual){
+            System.out.println("ERROR: pago invalido, valor menor a 0 o menor que la tarifa mensual");
+        }else{
+            int mesesExtras = (int)(tarifaMensual/pagoRealizado);
+            renovarSuscripcion(mesesExtras);
+        }
+    }
+
 }
