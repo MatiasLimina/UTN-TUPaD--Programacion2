@@ -8,9 +8,9 @@ public class Suscripcion {
     static int totalSuscripciones = 0;
 
     public Suscripcion(String cliente, int mesesPagados, double tarifaMensual) {
-        this.cliente = cliente;
-        this.mesesPagados = mesesPagados;
-        this.tarifaMensual = tarifaMensual;
+        setCliente(cliente);
+        setMesesPagados(mesesPagados);
+        setTarifaMensual(tarifaMensual);
         totalSuscripciones ++;
         numeroSocio = totalSuscripciones;
     }
@@ -18,4 +18,42 @@ public class Suscripcion {
         this(cliente,1,25000);
     }
 
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String cliente) {
+        if (cliente = null || cliente.isBlank()){
+            System.out.println("ERROR: el nombre de cliente no puede estar vacio");
+            this.cliente = "Sin nombre";
+        }else{
+            this.cliente = cliente;
+        }
+    }
+
+    public int getMesesPagados() {
+        return mesesPagados;
+    }
+
+    public void setMesesPagados(int mesesPagados) {
+        if(mesesPagados < 1){
+            System.out.println("ERROR: no se puede asignar menos de 1 mes pagado");
+            this.mesesPagados = 1;
+        }else{
+            this.mesesPagados = mesesPagados;
+        }
+    }
+
+    public double getTarifaMensual() {
+        return tarifaMensual;
+    }
+
+    public void setTarifaMensual(double tarifaMensual) {
+        if (tarifaMensual < 0){
+            System.out.println("ERROR: la tarifa no puede ser menor a 0");
+            this.tarifaMensual = 0;
+        }else{
+            this.tarifaMensual = tarifaMensual;
+        }
+    }
 }
