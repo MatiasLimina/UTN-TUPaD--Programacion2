@@ -1,5 +1,7 @@
 package EjercicioIntegrador_01;
 
+import java.util.Objects;
+
 public class Suscripcion {
     private final int numeroSocio;
     private String cliente;
@@ -87,5 +89,15 @@ public class Suscripcion {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Suscripcion that = (Suscripcion) o;
+        return numeroSocio == that.numeroSocio;
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(numeroSocio);
+    }
 }
