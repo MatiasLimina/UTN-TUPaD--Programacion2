@@ -70,13 +70,13 @@ public class Suscripcion {
         if (pagoRealizado < 0 || pagoRealizado<tarifaMensual){
             System.out.println("ERROR: pago invalido, valor menor a 0 o menor que la tarifa mensual");
         }else{
-            int mesesExtras = (int)(tarifaMensual/pagoRealizado);
+            int mesesExtras = (int)(pagoRealizado/tarifaMensual);
             renovarSuscripcion(mesesExtras);
         }
     }
 
-    public static int getSuscripcionesActivas(){
-        return totalSuscripciones;
+    public static String getSuscripcionesActivas(){
+        return "El total de suscripciones activas es de: " + totalSuscripciones;
     }
 
     @Override
