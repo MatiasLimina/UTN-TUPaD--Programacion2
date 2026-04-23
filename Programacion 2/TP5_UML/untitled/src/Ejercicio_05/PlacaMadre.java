@@ -5,7 +5,8 @@ public class PlacaMadre {
     private String chipset;
 
     public PlacaMadre(String marca,String chipset){
-
+        setMarca(marca);
+        setChipset(chipset);
     }
     public String getMarca() {
         return marca;

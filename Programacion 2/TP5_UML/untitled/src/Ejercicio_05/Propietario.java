@@ -46,7 +46,7 @@ public class Propietario {
     public String toString() {
         return "Propietario{" +
                 "nombre='" + nombre + '\'' +
-                ", dni=" + dni + "Computadora=" + computadora.getMarca() +
+                ", dni=" + dni + ", Computadora=" + computadora.getMarca() +
                 '}';
     }
 }

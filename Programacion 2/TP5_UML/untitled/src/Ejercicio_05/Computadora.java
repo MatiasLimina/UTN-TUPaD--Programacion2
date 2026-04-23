@@ -6,8 +6,11 @@ public class Computadora {
     private PlacaMadre placaMadre;
     private Propietario propietario;
 
-    public Computadora(String marca, String numeroSerie, PlacaMadre placaMadre, Propietario propietario) {
-
+    public Computadora(String marca, String numeroSerie, String marcaPlaca,String chipsetPlaca, Propietario propietario) {
+        setMarca(marca);
+        setNumeroSerie(numeroSerie);
+        setPlacaMadre(marcaPlaca, chipsetPlaca);
+        setPropietario(propietario);
     }
     public String getMarca() {
         return marca;
@@ -28,7 +31,7 @@ public class Computadora {
         }
     }
     public void setPlacaMadre(String marca, String chipset) {
-           PlacaMadre placaMadre = new PlacaMadre(marca, chipset);
+           this.placaMadre = new PlacaMadre(marca, chipset);
     }
     public void setMarca(String marca) {
         if ( marca == null || marca.isBlank()){
@@ -48,6 +51,6 @@ public class Computadora {
     }
     @Override
     public String toString() {
-        return "Computadora{" + "marca=" + marca + ", numeroSerie=" + numeroSerie + ", placaMadre=" + placaMadre + '}';
+        return "Computadora{" + "marca=" + marca + ", numeroSerie=" + numeroSerie + ", placaMadre=" + placaMadre + ", propietario=" + propietario.getNombre() + '}';
     }
 }
