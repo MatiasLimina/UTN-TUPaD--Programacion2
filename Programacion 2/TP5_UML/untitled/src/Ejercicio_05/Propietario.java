@@ -38,6 +38,15 @@ public class Propietario {
     }
     public void setComputadora(Computadora computadora) {
         this.computadora = computadora;
-        if ( )
+        if ( computadora != null && computadora.getPropietario() != this){
+            computadora.setPropietario(this);
+        }
+    }
+    @Override
+    public String toString() {
+        return "Propietario{" +
+                "nombre='" + nombre + '\'' +
+                ", dni=" + dni + "Computadora=" + computadora.getMarca() +
+                '}';
     }
 }
