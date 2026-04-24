@@ -24,6 +24,7 @@ public class Computadora {
     public Propietario getPropietario() {
         return propietario;
     }
+
     public void setPropietario(Propietario propietario) {
         this.propietario = propietario;
         if ( propietario != null && propietario.getComputadora() != this){
