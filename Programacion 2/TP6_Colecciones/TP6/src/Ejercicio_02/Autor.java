@@ -8,10 +8,10 @@ public class Autor {
     private final String id;
     private String nombre;
     private String nacionalidad;
-    private int contador = 1;
+    private static int contador = 1;
 
     public Autor (String nombre, String nacionalidad) {
-        this.id = "AUT-"+contador++;
+        this.id = "AUT-" + contador++;
         setNombre(nombre);
         setNacionalidad(nacionalidad);
     }
@@ -59,8 +59,7 @@ public class Autor {
         return "Autor{" +
                 "id='" + id + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", nacionalidad='" + nacionalidad + '\'' +
-                ", contador=" + contador +
+                ", nacionalidad='" + nacionalidad + '\''+
                 '}';
     }
 
