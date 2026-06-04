@@ -1,4 +1,4 @@
-package Ejercicio_01;
+package Interfaces;
 
 public interface Pagable {
     public abstract double calcularTotal();

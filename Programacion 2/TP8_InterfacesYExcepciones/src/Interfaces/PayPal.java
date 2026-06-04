@@ -1,4 +1,4 @@
-package Ejercicio_01;
+package Interfaces;
 
 public class PayPal implements PagoConDescuento, Pago {
     @Override

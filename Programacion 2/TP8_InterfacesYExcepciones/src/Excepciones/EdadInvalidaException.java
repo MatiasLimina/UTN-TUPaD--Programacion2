@@ -1,4 +1,4 @@
-package Ejercicio_02;
+package Excepciones;
 
 public class EdadInvalidaException extends RuntimeException {
     public EdadInvalidaException(String message) {

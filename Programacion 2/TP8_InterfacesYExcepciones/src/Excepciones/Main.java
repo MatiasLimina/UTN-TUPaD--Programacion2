@@ -1,4 +1,4 @@
-package Ejercicio_02;
+package Excepciones;
 
 import java.io.*;
 import java.util.Scanner;

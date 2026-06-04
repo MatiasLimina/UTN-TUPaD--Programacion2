@@ -1,4 +1,4 @@
-package Ejercicio_01;
+package Interfaces;
 
 public class Producto implements Pagable {
     private String nombre;
